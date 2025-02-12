@@ -1,10 +1,12 @@
+// Only  for db connectivity and server issues
+
 const mongoose = require('mongoose');
 require('dotenv').config();
-// to install express 
-const express = require('express');
-// to create app in express
-const app=express();
 
+// to import application code here
+const app= require('./app');
+
+// for database connection
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=>{
   console.log("Connnect to MongoDB");
