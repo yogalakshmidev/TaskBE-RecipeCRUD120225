@@ -1,7 +1,10 @@
+
+
 // Only  for db connectivity and server issues
 
 const mongoose = require("mongoose");
-require('dotenv').config();
+// import dotenv
+require("dotenv").config();
 
 // to import application code here
 const app = require("./app");
