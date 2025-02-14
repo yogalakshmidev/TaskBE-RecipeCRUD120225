@@ -1,31 +1,17 @@
 // to create router use express
 const express = require("express");
-// import model here
-const Recipe = require('../models/recipe');
+
+
+//  import from Controller
+
+// const recipeController= require("../controllers/recipeController");
+
+const {createRecipe }=  require('../controllers/recipeController');
 
 // create a new router
 const recipesRouter = express.Router();
 
-recipesRouter.post('/', async (req, res) => {
-  // console.log(req.body);
-  // req.json({ message: "Tasty Recipe World" });
-  try {
-    const { Title , Ingredients , Content } = req.body;
-    // Create a new Recipe
-    const newRecipe = new Recipe({
-      Title ,
-      Ingredients ,
-      Content 
-    });
-
-    // Save the post in the database
-    await newRecipe.save();
-
-    // send the response to the frontend
-    res.status(201).json({ message : 'Recipe created successfully.'});
-  } catch (error) {
-    res.status(500).json({ message: error.message});
-  }
-});
+// recipesRouter.post('/',recipeController.createRecipe );
+recipesRouter.post('/',createRecipe);
 
 module.exports = recipesRouter;
