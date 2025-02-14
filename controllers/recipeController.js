@@ -23,6 +23,38 @@ createRecipe:async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message});
   }
+},
+getRecipes: async(req,res) => {
+try{
+  // get all the recipes from the database
+  const recipes = await Recipe.find().select('-__v');
+
+  // send a response
+  res.status(200).json(recipes);
+}catch(error){
+  res.status(500).json({message: error.message});
 }
+},
+getRecipe: async(req,res) => {
+  try{
+  
+  }catch(error){
+    res.status(500).json({message: error.message});
+  }
+  },
+  updateRecipe: async(req,res) => {
+    try{
+    
+    }catch(error){
+      res.status(500).json({message: error.message});
+    }
+    },
+    deleteRecipe: async(req,res) => {
+      try{
+      
+      }catch(error){
+        res.status(500).json({message: error.message});
+      }
+      }
 }
 module.exports = recipeController;

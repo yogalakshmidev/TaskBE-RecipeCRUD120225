@@ -6,12 +6,12 @@ const express = require("express");
 
 // const recipeController= require("../controllers/recipeController");
 
-const {createRecipe }=  require('../controllers/recipeController');
+const {createRecipe, getRecipes }=  require('../controllers/recipeController');
 
 // create a new router
 const recipesRouter = express.Router();
 
 // recipesRouter.post('/',recipeController.createRecipe );
 recipesRouter.post('/',createRecipe);
-
+recipesRouter.get('/',getRecipes);
 module.exports = recipesRouter;
