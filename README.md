@@ -37,3 +37,7 @@ Create Recipe:
     "Ingredients":"Carrot, Onion,Rice",
     "Content": "This is my first recipe on RecipeApp."
 }
+
+#### Postman Documentation Link
+
+Published Postman Url  :   https://documenter.getpostman.com/view/585022/2sAYXEDHro
